@@ -1,0 +1,5 @@
+<% parse["Search"].forEach(function(movie){ %>
+    <li> <%= movie["Title"] %>  <b> <%= movie["Year"] %></b></li>
+<%    }); %>
+
+<a href="/search"> search again !</a>
