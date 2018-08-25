@@ -17,9 +17,12 @@
         </div>
         <div class="container">
             <ul class="list-group">
+               <% if(parse["Search"]) { %>
                 <% parse["Search"].forEach(function(movie){ %>
                     <li class="list-group-item list-group-item-info"> <%= movie["Title"] %>  <b> <%= movie["Year"] %></b></li>
-                <%    }); %>
+                <%    }); } else { %>
+                    <h4>No results found.</h4>
+                <% } %>
             </ul>
         </div>
      <div id="button" class="pagination justify-content-center">
